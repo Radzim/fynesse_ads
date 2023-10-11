@@ -203,9 +203,9 @@ def make_prices_coordinates_indices(connection=None):
     query('CREATE INDEX `pc.postcode` USING HASH ON `prices_coordinates_data` (postcode);', connection=connection)
     query('CREATE INDEX `pc.coordinates` USING BTREE ON `prices_coordinates_data` (`latitude`, `longitude`);', connection=connection)
 
-print(query("SHOW FULL PROCESSLIST"))
-query("KILL 8278")
-print(query("SHOW FULL PROCESSLIST"))
+# print(query("SHOW FULL PROCESSLIST"))
+# query("KILL 8278")
+# print(query("SHOW FULL PROCESSLIST"))
 # print(query("""SELECT now()"""))
 # print(time.ctime(), 'start')
 # create_db('property_prices')
