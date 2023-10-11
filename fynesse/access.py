@@ -19,9 +19,9 @@ def download_files(path='data/'):
         urllib.request.urlretrieve(web_address+filename, path+filename)
 
 
-# def write_credentials(username, password):
-#     with open("credentials.yaml", "w") as file:
-#         yaml.dump({'username': username, 'password': password}, file)
+def write_credentials(username, password):
+    with open("credentials.yaml", "w") as file:
+        yaml.dump({'username': username, 'password': password}, file)
 
 
 def connect(url="database-ads.cgrre17yxw11.eu-west-2.rds.amazonaws.com", port=3306, database='property_prices'):
